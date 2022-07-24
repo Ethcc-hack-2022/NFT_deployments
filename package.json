@@ -1,0 +1,33 @@
+{
+  "name": "deploy_contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx truffle compile",
+    "verify": "npx truffle run verify ERC721 --network rinkeby",
+    "flat": "npx truffle-flattener ./contracts/*",
+    "migrate:rinkeby": "npx truffle migrate --network rinkeby --reset --compile-all",
+    "migrate:mumbai": "npx truffle migrate --network mumbai --reset --compile-all",
+    "migrate:cronos": "npx truffle migrate --network cronos --reset --compile-all",
+    "migrate:sokol": "npx truffle migrate --network sokol --reset --compile-all",
+    "migrate:neonlabs": "npx truffle migrate --network neonlabs --reset --compile-all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
+    "@truffle/hdwallet-provider": "^2.0.12",
+    "truffle": "^5.5.6",
+    "truffle-flattener": "^1.6.0",
+    "web3": "^1.7.4"
+  },
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.5.26"
+  }
+}
